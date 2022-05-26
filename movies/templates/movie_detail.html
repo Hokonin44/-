@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="content">
+        {% for i in movie %}
+            <img src="{{ i.img.url }}" width="100" height="111" alt="">
+            <a href="/movies/{{ i.id }}/"><h5>Title - {{ i.title }}</h5></a>
+            <p>Text - {{ i.text }}</p>
+
+        {% endfor %}
+    </div>
+{% endblock %}
